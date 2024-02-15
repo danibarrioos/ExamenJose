@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
     <title>Operaciones con dos números</title>
@@ -57,6 +57,8 @@
             </div>
             <input type="button" value="Calcular suma" onclick="calcularSuma()">
             <input type="button" value="Calcular resta" onclick="calcularResta()">
+            <input type="button" value="Calcular resta" onclick="calcularMultiplicacion()">
+
         </form>
 
         <div id="resultado"></div>
@@ -84,6 +86,17 @@ function calcularResta() {
     if (!isNaN(num1) && !isNaN(num2)) {
         var resta = num1 - num2;
         document.getElementById("resultado").innerHTML = "El resultado de la resta es: " + resta;
+    } else {
+        document.getElementById("resultado").innerHTML = "Por favor, ingrese dos números válidos.";
+    }
+}
+function calcularMultiplicacion() {
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+
+    if (!isNaN(num1) && !isNaN(num2)) {
+        var suma = num1 * num2;
+        document.getElementById("resultado").innerHTML = "El resultado de la suma es: " + suma;
     } else {
         document.getElementById("resultado").innerHTML = "Por favor, ingrese dos números válidos.";
     }
